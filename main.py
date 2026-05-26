@@ -255,3 +255,4 @@ plt.show()
 
 print("\n==========================================")
 print("PROSES SELESAI. Silakan tangkap layar (screenshot) grafik di atas untuk isi Makalah IEEE kamu.")
+print("===========================================")
