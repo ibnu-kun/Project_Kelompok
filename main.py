@@ -49,6 +49,20 @@ labels = np.array(labels)
 print(f"Total gambar berhasil dimuat: {len(image_data)}")
 print(f"Kelas terdeteksi: {class_names}")
 
+#=========================================================================================
+# Menampilkan sampel gambar resize dimensi 64*64 untuk bukti bahwa proses resize berhasil
+#=========================================================================================
+print("Menampilkan sampel gambar untuk bukti resize...")
+plt.figure(figsize=(5, 5))
+# Mengambil gambar pertama (indeks 0) dan mengonversi warna dari BGR (OpenCV) ke RGB (Matplotlib)
+plt.imshow(cv2.cvtColor(image_data[0], cv2.COLOR_BGR2RGB))
+plt.title(f"Bukti Resize: {image_data[0].shape[1]}x{image_data[0].shape[0]} Pixels")
+plt.xlabel("Lebar (Pixels)")
+plt.ylabel("Tinggi (Pixels)")
+plt.grid(color='white', linestyle='--', linewidth=0.5)
+plt.show()
+# ========================================================================================
+
 if len(image_data) < 500:
     print("Peringatan: Jumlah dataset kurang dari 500 gambar sesuai aturan tugas!")
 
